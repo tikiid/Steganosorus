@@ -26,6 +26,7 @@ def chiffre_cesar (message, key):
 def cesar_decrypt (message, key):
     return chiffre_cesar(message, -(key))
 '''
+string.printable = string.printable.replace("\r", "à")
 
 def cesar_ciffer(message, key):
 	if type(key) != int :
