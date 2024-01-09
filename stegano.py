@@ -13,10 +13,8 @@ def lsb1_stegano(image_path, message):
         raise Exception("taille de message supérieur aux nombres de pixels de l'image")
 
     nb_rows, nb_cols = image_array.shape
-    print()
     for index_row in range(nb_rows):
         for index_col in range(nb_cols):
-            print(index_row * nb_cols + index_col)
             if(index_row * nb_cols + index_col < len(binary_message)):
                 image_array[index_row, index_col] += int(binary_message[index_row * nb_cols + index_col])
             else:
